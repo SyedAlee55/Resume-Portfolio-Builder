@@ -1,0 +1,9 @@
+cd Resume-Portfolio-Builder
+npm create vite@latest frontend --template react
+cd frontend
+npm install
+
+npm install -D tailwindcss@3
+npx tailwindcss init
+
+npm run dev
