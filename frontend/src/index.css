@@ -1,3 +1,17 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* small helpers */
+html { scroll-behavior: smooth; }
+
+/* example: ensure body background reacts to dark class on html */
+:root {
+  --page-bg: #ffffff;
+}
+html.dark {
+  --page-bg: #0f172a; /* gray-900 */
+}
+body {
+  background: var(--page-bg);
+}

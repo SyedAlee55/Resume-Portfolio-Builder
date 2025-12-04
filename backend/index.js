@@ -7,15 +7,24 @@ dotenv.config();
 
 const app = express();
 
-// Middleware
-app.use(cors());
+// Enable CORS properly
+app.use(
+  cors({
+    origin: 'http://localhost:5173',         // frontend origin
+    methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+    allowedHeaders: ['Content-Type', 'x-auth-token'], // allow your auth header
+    credentials: true,                       // allow auth headers/cookies
+  })
+);
+
+// Parse JSON
 app.use(express.json());
 
 // Connect to MongoDB
 mongoose
-    .connect(process.env.MONGO_URI)
-    .then(() => console.log('MongoDB Connected'))
-    .catch((err) => console.log(err));
+  .connect(process.env.MONGO_URI)
+  .then(() => console.log('MongoDB Connected'))
+  .catch((err) => console.log(err));
 
 // Root Route
 app.get('/', (req, res) => {
