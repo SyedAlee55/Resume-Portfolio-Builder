@@ -1,0 +1,3 @@
+huggingface000@outlook.com
+Huggingface@000
+HuggingFaceAPIkEY = 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
