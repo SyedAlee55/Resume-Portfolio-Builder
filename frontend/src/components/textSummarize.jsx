@@ -53,7 +53,6 @@ const TextSummarize = () => {
             </button>
 
             {/* Output Area */}
-            {/* Output Area */}
             {summary && (
                 <div style={{ marginTop: '20px', border: '1px solid #ccc', padding: '15px' }}>
                     <h4>Generated Summary:</h4>

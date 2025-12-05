@@ -21,6 +21,7 @@ mongoose
 app.use('/api/auth', require('./routes/auth'));
 app.use('/api/resumes', require('./routes/resumes'));
 app.use('/api/textSummarize', require('./routes/textSummarize'));
+app.use('/api/textProfessionalize', require('./routes/textProfessionalize'));
 
 const PORT = process.env.PORT || 5000;
 

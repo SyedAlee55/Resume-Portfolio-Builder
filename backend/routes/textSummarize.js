@@ -24,7 +24,7 @@ router.post('/', auth, async (req, res) => {
             messages: [
                 {
                     role: "user",
-                    content: `Summarize the following text into concise bullet points:\n\n${rawText}`,
+                    content: `Summarize this paragraph and make it more professional: \n${rawText}`,
                 }
             ],
             parameters: {

@@ -3,6 +3,7 @@ import axios from 'axios';
 import { AuthContext } from '../context/AuthContext';
 import { Link } from 'react-router-dom';
 import TextSummarize from '../components/textSummarize';
+import TextProfessionalize from '../components/textProfessionalize';
 
 const Dashboard = () => {
     const [resumes, setResumes] = useState([]);
@@ -88,6 +89,7 @@ const Dashboard = () => {
             </div>
             <div>
                 <TextSummarize />
+                <TextProfessionalize />
             </div>
         </div>
 
