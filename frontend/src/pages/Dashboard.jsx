@@ -4,6 +4,7 @@ import { AuthContext } from '../context/AuthContext';
 import { Link } from 'react-router-dom';
 import TextSummarize from '../components/textSummarize';
 import TextProfessionalize from '../components/textProfessionalize';
+import TextImprove from '../components/textImprove';
 
 const Dashboard = () => {
     const [resumes, setResumes] = useState([]);
@@ -90,6 +91,7 @@ const Dashboard = () => {
             <div>
                 <TextSummarize />
                 <TextProfessionalize />
+                    <TextImprove />
             </div>
         </div>
 
