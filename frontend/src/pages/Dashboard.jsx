@@ -76,13 +76,19 @@ const Dashboard = () => {
                     </div>
 
                     {/* Create New Resume Button */}
-                    <div className="mb-8">
+                    <div className="mb-8 flex space-x-4">
                         <button
                             onClick={handleCreateResume}
                             className="flex items-center gap-2 bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-6 rounded-lg transition-colors duration-200 shadow-lg hover:shadow-xl"
                         >
                             <FaPlus />
                             Create New Resume
+                        </button>
+                        <button
+                            onClick={() => navigate('/portfolio-manager')}
+                            className="flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg transition-colors duration-200 shadow-lg hover:shadow-xl"
+                        >
+                            Manage Portfolios
                         </button>
                     </div>
 

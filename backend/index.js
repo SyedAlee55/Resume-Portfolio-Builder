@@ -28,12 +28,13 @@ mongoose
 
 // Root Route
 app.get('/', (req, res) => {
-    res.send('API is running...');
+  res.send('API is running...');
 });
 
 // Routes
 app.use('/api/auth', require('./routes/auth'));
 app.use('/api/resumes', require('./routes/resumes'));
+app.use('/api/portfolio', require('./routes/portfolio'));
 
 const PORT = process.env.PORT || 5000;
 

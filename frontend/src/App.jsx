@@ -4,6 +4,8 @@ import { AuthProvider, AuthContext } from './context/AuthContext';
 import Login from './pages/Login';
 import Signup from './pages/Signup';
 import Dashboard from './pages/Dashboard';
+import Portfolio from './pages/Portfolio';
+import PortfolioManager from './pages/PortfolioManager';
 import Editor from './pages/Editor';
 import Landing from "./pages/Landing";
 
@@ -38,6 +40,19 @@ function App() {
               </ProtectedRoute>
             }
           />
+
+          {/* Protected Portfolio Manager */}
+          <Route
+            path="/portfolio-manager"
+            element={
+              <ProtectedRoute>
+                <PortfolioManager />
+              </ProtectedRoute>
+            }
+          />
+
+          {/* Public Portfolio */}
+          <Route path="/p/:id" element={<Portfolio />} />
 
           {/* Protected Editor */}
           <Route
